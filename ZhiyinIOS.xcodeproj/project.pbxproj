@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3A521E2A1B94D30017F899 /* BoostDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3A521D2A1B94D30017F899 /* BoostDelegate.swift */; };
 		1D5663A62A1B774F004A3D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5663A52A1B774F004A3D09 /* AppDelegate.swift */; };
 		1D5663A82A1B774F004A3D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5663A72A1B774F004A3D09 /* SceneDelegate.swift */; };
 		1D5663AA2A1B774F004A3D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5663A92A1B774F004A3D09 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3A521D2A1B94D30017F899 /* BoostDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoostDelegate.swift; sourceTree = "<group>"; };
 		1D5663A22A1B774F004A3D09 /* ZhiyinIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiyinIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D5663A52A1B774F004A3D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D5663A72A1B774F004A3D09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				1D5663A52A1B774F004A3D09 /* AppDelegate.swift */,
+				1D3A521D2A1B94D30017F899 /* BoostDelegate.swift */,
 				1D5663A72A1B774F004A3D09 /* SceneDelegate.swift */,
 				1D5663A92A1B774F004A3D09 /* ViewController.swift */,
 				1D5663AB2A1B774F004A3D09 /* Main.storyboard */,
@@ -88,7 +91,6 @@
 				CDAE9BC1A1C64A0F8B8D4E7D /* Pods-ZhiyinIOS.debug.xcconfig */,
 				6FD190B95F29CC9831C7A145 /* Pods-ZhiyinIOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,10 +102,12 @@
 			buildConfigurationList = 1D5663CC2A1B774F004A3D09 /* Build configuration list for PBXNativeTarget "ZhiyinIOS" */;
 			buildPhases = (
 				818D59E80D35ECA68B8236CF /* [CP] Check Pods Manifest.lock */,
+				66A077E5F7852A90FBA047B5 /* [CP-User] Run Flutter Build flutter_module Script */,
 				1D56639E2A1B774F004A3D09 /* Sources */,
 				1D56639F2A1B774F004A3D09 /* Frameworks */,
 				1D5663A02A1B774F004A3D09 /* Resources */,
 				76DC51B449CA0966509894F6 /* [CP] Embed Pods Frameworks */,
+				366349962357E50FE7D1DD13 /* [CP-User] Embed Flutter Build flutter_module Script */,
 			);
 			buildRules = (
 			);
@@ -161,6 +165,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		366349962357E50FE7D1DD13 /* [CP-User] Embed Flutter Build flutter_module Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build flutter_module Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+		66A077E5F7852A90FBA047B5 /* [CP-User] Run Flutter Build flutter_module Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_module Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 		76DC51B449CA0966509894F6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D3A521E2A1B94D30017F899 /* BoostDelegate.swift in Sources */,
 				1D5663AA2A1B774F004A3D09 /* ViewController.swift in Sources */,
 				1D5663A62A1B774F004A3D09 /* AppDelegate.swift in Sources */,
 				1D5663A82A1B774F004A3D09 /* SceneDelegate.swift in Sources */,
@@ -285,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -339,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

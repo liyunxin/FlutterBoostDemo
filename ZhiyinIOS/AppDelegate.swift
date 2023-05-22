@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import flutter_boost
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //创建代理，做初始化操作
+        let delegate = BoostDelegate()
+        FlutterBoost.instance().setup(application, delegate: delegate) { engine in
+
+        }
         return true
     }
 
